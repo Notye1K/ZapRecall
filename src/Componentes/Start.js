@@ -1,8 +1,12 @@
+import Logo from "./assets/logo.png"
+import Next from "./assets/next.png"
+
+
 export default function Start (){
     return (
         <div className='start'>
-            <img src='assets/logo.png' alt='logo'/>
-            <button>Praticar React <img src='assets/next.png' alt='next'/> </button>
+            <img src={Logo} alt='logo'/>
+            <button>Praticar React <img src={Next} alt='next'/> </button>
         </div>
     )
 }
