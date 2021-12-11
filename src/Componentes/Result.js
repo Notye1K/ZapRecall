@@ -1,5 +1,5 @@
-import Party from "./assets/party.png"
-import Sad from "./assets/sad.png"
+import Party from "../assets/party.png"
+import Sad from "../assets/sad.png"
 
 
 export default function Result () {

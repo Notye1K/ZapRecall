@@ -1,12 +1,12 @@
-import Logo from "./assets/logo.png"
-import Next from "./assets/next.png"
+import Logo from "../assets/logo.png"
+import Next from "../assets/next.png"
 
 
-export default function Start (){
+export default function Start (props){
     return (
         <div className='start'>
             <img src={Logo} alt='logo'/>
-            <button>Praticar React <img src={Next} alt='next'/> </button>
+            <button onClick={() => props.setScreen(1)}>Praticar React <img src={Next} alt='next'/> </button>
         </div>
     )
 }
