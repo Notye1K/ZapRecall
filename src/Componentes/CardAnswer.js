@@ -1,13 +1,17 @@
 export default function CardAnswer(props){
     return (
-        <div className='cardAnswer'>
-            <div>{props.index + 1}/{props.indexLength}</div>
-            <div>{props.question}</div>
-            <div>{props.answer}</div>
-            <button onClick={() => onClick(props)}>Aprendi agora</button>
-            <button onClick={() => {onClick(props); props.setFailure(1)}}>Não lembrei</button>
-            <button onClick={() => onClick(props)}>Lembrei com esforço</button>
-            <button onClick={() => onClick(props)}>Zap!</button>
+        <div className='cardAnswer card'>
+            <div className='topContainer'>
+                <div className='question'>{props.question}</div>
+                <div className='cardsTotal'>{props.index + 1}/{props.indexLength}</div>
+            </div>
+            <div className='answer'>{props.answer}</div>
+            <div className='buttons'>
+                <button className='aprendi' onClick={() => onClick(props)}>Aprendi agora</button>
+                <button className='failure' onClick={() => {onClick(props); props.setFailure(1)}}>Não lembrei</button>
+                <button className='lembrei' onClick={() => onClick(props)}>Lembrei com esforço</button>
+                <button className='zap' onClick={() => onClick(props)}>Zap!</button>
+            </div>
         </div>
     )
 }
