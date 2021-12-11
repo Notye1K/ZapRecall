@@ -4,7 +4,7 @@ import LogoMini from "../assets/logo-mini.png"
 import { useState } from "react"
 import Result from "./Result"
 
-export default function FlashCard(props) {
+export default function FlashCard() {
     const data = [{question:"O que é JSX?", answer:"Uma extensão de linguagem do JavaScript"}, {question:"O React é ___", answer:"uma biblioteca JavaScript para construção de interfaces"},
     {question:"Componentes devem iniciar com ___", answer:" letra maiúscula"}, {question:"Podemos colocar __ dentro do JSX", answer:"expressões"},
     {question:"O ReactDOM nos ajuda __", answer:"interagindo com a DOM para colocar componentes React na mesma"}, {question:"Usamos o npm para __ ", answer:"gerenciar os pacotes necessários e suas dependências"},
