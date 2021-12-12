@@ -74,6 +74,7 @@ body {
 .card{
     width: 352px;
     height: 518px;
+    margin-bottom: 2%;
 
     background: #FFFFFF;
     box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.12);
@@ -95,6 +96,8 @@ body {
     justify-content: flex-end;
 }
 .question{
+    margin: 0 2%;
+
     font-style: normal;
     font-weight: bold;
     font-size: 28px;
@@ -146,6 +149,8 @@ body {
     text-align: center;
 }
 .buttons {
+    margin-bottom: 2%;
+
     display: flex;
     justify-content: space-evenly;
 }
