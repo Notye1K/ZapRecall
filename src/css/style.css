@@ -189,3 +189,20 @@ body {
     line-height: 26px;
     text-align: center;
 }
+.tryAgain{
+    width: 345px;
+    height: 72px;
+
+    background: white;
+    border: solid 3px #FFEF61;
+    border-radius: 12px;
+    margin-top: 3%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-style: Bold;
+    font-size: 20px;
+    line-height: 23px;
+}
