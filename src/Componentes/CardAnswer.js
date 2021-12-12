@@ -6,7 +6,7 @@ export default function CardAnswer(props){
     const [border, setBorder] = useState('')
 
     return (
-        <div data-identifier="flashcard" className={`cardAnswer card ${border}`}>
+        <div data-identifier="flashcard" className={`card ${border}`}>
             <div className='topContainer'>
                 <div className='question'>{props.question}</div>
                 <div data-identifier="counter" className='cardsTotal'>{props.index + 1}/{props.indexLength}</div>
@@ -17,7 +17,7 @@ export default function CardAnswer(props){
                 <button className='aprendi' onClick={() => setBorder('aprendi')}>Aprendi agora</button>
                 <button className='failure' onClick={() => {setBorder('failure'); props.setFailure(1)}}>Não lembrei</button>
                 <button className='lembrei' onClick={() => setBorder('lembrei')}>Lembrei com esforço</button>
-                <button className='zap' onClick={() => setBorder('zap')}>Zap!</button>
+                <button className='zap' onClick={() => {setBorder('zap'); props.setMeta(props.meta + 1)}}>Zap!</button>
             </div>):(
                 <div className='turn'><img data-identifier="arrow" onClick={() => onClick(props, setBorder)} src ={Turn} alt='virar'/></div>
             )}
