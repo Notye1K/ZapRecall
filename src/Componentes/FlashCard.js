@@ -16,10 +16,17 @@ export default function FlashCard({data, input, title}) {
     return (
         <div className='flashCard'>
             <img className='miniLogo' src ={LogoMini} alt='logo-mini'/>
+
             {result === 0 && <div className='title'>{title}</div>}
+
             { result === 0 ? (screenQuestion === 0 ? (
-            (<CardQuestion index={index} indexLength={data.length} question={data[index].question} setScreenQuestion = {setScreenQuestion}/>)
-            ) : <CardAnswer meta={meta} setMeta={setMeta} setFailure={setFailure} index={index} indexLength={data.length} answer={data[index].answer} question={data[index].question} setIndex={setIndex} setScreenQuestion = {setScreenQuestion} setResult={setResult}/>
+            (<CardQuestion index={index} indexLength={data.length} question={data[index].question}
+                setScreenQuestion = {setScreenQuestion}/>)
+
+            ) : (<CardAnswer meta={meta} setMeta={setMeta} setFailure={setFailure} index={index} 
+                indexLength={data.length} answer={data[index].answer} question={data[index].question} 
+                setIndex={setIndex} setScreenQuestion = {setScreenQuestion} setResult={setResult}/>)
+                
             ) : <Result input={input} meta={meta} failure={failure}/>}
         </div>
     )
